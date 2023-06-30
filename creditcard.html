@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bs-border-radius: 1rem;
+      }
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+      .bg-dark{
+        background-color: #111111 !important;
+      }
+      .card{
+        backdrop-filter: blur(50px);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+        border: 1px solid #979797;
+      }
+      .outer{
+        width: 380px;
+      }
+      .logo{
+        max-width: 80px;
+      }
+      .outer::after, .outer::before {
+        content: '';
+        position: absolute;
+        right: -22px;
+        top: -37px;
+        background: red;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .outer::before{
+        left: -15px;
+        right: initial;
+        bottom: -18px;
+        top: initial;
+        background: #f79e1b;
+        height: 70px;
+        width: 70px;
+      }
+      .text-grey{
+        color: #aeaeae;
+      }
+      .logo-visa{
+        max-width: 50px;
+      }
+      .text-sm{
+        font-size: 12px;
+      }
+      .background{
+        position: absolute;
+        z-index: -1;
+        width: 350px;
+        opacity: 0.2;
+      }
+      .background img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-dark d-flex align-items-center justify-content-center vh-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 offset-4 text-white d-flex align-items-center justify-content-center">
+          <div class="outer position-relative">
+            <div class="card rounded p-4">
+              <img src="./logo.png" alt="logo" class="logo">
+              <h2 class="mt-4">1111 2222 3333 4444</h2>
+              <div class="mt-4 d-flex align-items-center">
+                <div>
+                  <p class="text-grey text-sm m-0">Card Holder</p>
+                  <h6 class="mb-0">Happy Patel</h4>
+                </div>
+                <div class="ps-4">
+                  <p class="text-grey text-sm m-0">Expires</p>
+                  <h6 class="mb-0">04/26</h4>
+                </div>
+                <img src="./visa.png" alt="visa" class="img-fluid logo-visa ms-auto">
+              </div>
+              <div class="background">
+                <img src="./world.png" alt="world">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
